@@ -1,61 +1,112 @@
-.card {
-    background-color: #fff;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    padding: 24px;
-  }
-  
-  .card-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 16px;
-  }
-  
-  .card-content {
-    font-size: 14px;
-    color: #666;
-  }
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0px;
+}
+header {
+  background-color: #fbc02d; /* Ładny odcień żółtego */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Rozsuwa elementy */
+  align-items: center;
+}
 
-  ul {
-    list-style: none; /* Usuwamy domyślny marker */
-  }
-  ul li {
-    position: relative;
-    padding-left: 20px;
-  }
-  ul li::before {
-    content: "\2022"; /* Kod znaku unicode dla bullet point */
-    position: absolute;
-    left: 0;
-    top: 5px;
-  }
+header h1 {
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+  font-size: 64px;
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-  html {
+header img {
+  margin-left: 20px; /* Dodaje odstęp między tekstem a obrazem */
+}
+.product {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+.product img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+.product div {
+  max-width: 600px;
+}
+.product h1 {
+  font-size: 2.5rem;
+  color: #fbc02d;
+}
+.features ul {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap; /* Aby elementy ładnie się składały na mniejszych ekranach */
+}
+.features li {
+  background-color: #fbc02d;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex; /* Flexbox dla wyśrodkowania zawartości */
+  flex-direction: row; /* Ustawienie kolumnowe */
+  justify-content: center; /* Wyśrodkowanie w pionie */
+  align-items: center; /* Wyśrodkowanie w poziomie */
+}
+.contact {
+  text-align: center;
+  margin-top: 36px; /* Zwiększono odstęp od góry */
+}
+.contact h2 {
+  font-size: 2.5rem; /* Zwiększono rozmiar tekstu */
+  color: #fbc02d; /* Kolor pasujący do reszty motywu */
+  text-transform: uppercase; /* Wszystkie litery wielkie */
+  letter-spacing: 2px; /* Zwiększono odstępy między literami */
+  padding: 0px 36px;
+}
+.contact div.container {
+  display: flex;
+  justify-content: center;
+  gap: 60px; /* Zwiększono odstępy między osobami */
+  margin-top: 40px; /* Zwiększono odstęp od góry */
+}
 
+.contact div.person {
+  background-color: #333;
+  padding: 36px 64px;
+  border-radius: 12px; /* Lekko zwiększono zaokrąglenie */
+  max-width: 350px; /* Zwiększono maksymalną szerokość karty */
+  text-align: left;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3); /* Zwiększono cień */
+}
+.contact h3 {
+  font-size: 1.5rem; /* Zwiększono rozmiar tekstu */
+}
+.contact p {
+  margin: 15px 0; /* Zwiększono odstęp między akapitami */
+  font-size: 1.2rem; /* Zwiększono rozmiar tekstu */
+}
+/* Media query dla szerokości ekranu poniżej 600px */
+@media (max-width: 600px) {
+  .contact div.container {
+    flex-direction: column;
+    align-items: center; /* Wyśrodkowanie kart */
   }
-
-  body {
-    margin: 0px;
-  }
-
-  .imgHero {
-    width: 100%;
-    object-fit: contain;
-  }
-
-  .lines {
-    padding: 24px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .line {
-    width: 24px;
-    height: 8px;
-    background-color: gray;
-    margin-right: 10px; /* Adjust spacing between lines */
-  }
-  
-  .line.selected {
-    background-color: black;
-  }
+}
+footer {
+  background-color: #fbc02d;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
